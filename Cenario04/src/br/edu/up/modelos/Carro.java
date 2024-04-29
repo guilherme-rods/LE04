@@ -8,6 +8,12 @@ public class Carro {
 
     private String cor;
 
+    public Carro (String modelo, String placa, String cor){
+        this.modelo = modelo;
+        this.placa = placa;
+        this.cor = cor;
+    }
+
     public String getModelo() {
         return modelo;
     }
@@ -31,7 +37,4 @@ public class Carro {
     public void setCor(String cor) {
         this.cor = cor;
     }
-
-    
-
 }
