@@ -12,6 +12,14 @@ public class Livro {
 
     private int ano;
 
+    public Livro(String codigo, String titulo, String[] autor, String isbn, int ano) {
+        this.codigo = codigo;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.isbn = isbn;
+        this.ano = ano;
+    }
+
     public String getCodigo() {
         return codigo;
     }
@@ -51,10 +59,4 @@ public class Livro {
     public void setAno(int ano) {
         this.ano = ano;
     }
-
-    
-
-
-
-
 }

@@ -10,6 +10,11 @@ public class Dia{
        
     }
 
+    public Dia(int diaMes, Compromisso[] compromisso) {
+        this.diaMes = diaMes;
+        this.compromisso = compromisso;
+    }
+
     public int getDiaMes() {
         return diaMes;
     }
