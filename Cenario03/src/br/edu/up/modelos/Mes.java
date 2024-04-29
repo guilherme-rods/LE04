@@ -8,6 +8,12 @@ public class Mes {
 
     private Dia[] dias;
 
+    public Mes(int nome, int qtdeDias, Dia[] dias) {
+        this.nome = nome;
+        this.qtdeDias = qtdeDias;
+        this.dias = dias;
+    }
+
     public int getNome() {
         return nome;
     }

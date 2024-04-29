@@ -6,6 +6,11 @@ public class Dia{
 
     private Compromisso[] compromisso;
 
+    public Dia(int diaMes, Compromisso[] compromisso) {
+        this.diaMes = diaMes;
+        this.compromisso = compromisso;
+    }
+
     public int getDiaMes() {
         return diaMes;
     }

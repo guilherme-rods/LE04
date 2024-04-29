@@ -10,6 +10,13 @@ public class Compromisso {
 
     private int hora;
 
+    public Compromisso(String pessoa, String local, String assunto, int hora) {
+        this.pessoa = pessoa;
+        this.local = local;
+        this.assunto = assunto;
+        this.hora = hora;
+    }
+
     public String getPessoa() {
         return pessoa;
     }
@@ -41,7 +48,4 @@ public class Compromisso {
     public void setHora(int hora) {
         this.hora = hora;
     }
-
-    
-
 }

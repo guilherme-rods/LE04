@@ -50,7 +50,4 @@ public class Reserva {
     public void setValor(double valor) {
         this.valor = valor;
     }
-
-    
-    
 }
