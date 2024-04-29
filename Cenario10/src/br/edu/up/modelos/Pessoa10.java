@@ -1,6 +1,6 @@
 package br.edu.up.modelos;
 
-public abstract class Pessoa {
+public abstract class Pessoa10 {
     private String nome, cpf, rg, endereço, telefone, cidade;
     private Enum sexo;
 
