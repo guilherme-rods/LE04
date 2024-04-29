@@ -4,7 +4,11 @@ public class Dia{
 
     private int diaMes;
 
-    private Compromisso[] compromisso;
+    private Compromisso[] compromisso=new Compromisso[24];
+
+    public Dia(Compromisso c){
+       
+    }
 
     public int getDiaMes() {
         return diaMes;
