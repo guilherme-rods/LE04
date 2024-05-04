@@ -1,6 +1,5 @@
 package br.edu.up.modelos;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Endereco {
     private String rua;
