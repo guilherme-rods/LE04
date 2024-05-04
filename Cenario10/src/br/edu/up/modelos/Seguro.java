@@ -1,18 +1,14 @@
 package br.edu.up.modelos;
-import java.util.ArrayList;
+
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Objects;
 
 public abstract class Seguro {
-private String apolice;
-private double vlrApolice;
-private LocalDate dtInicio;
-private LocalDate dtFim;
-private List<Segurado> segurados;
-
-    public List<Segurado> getSegurados() {
-        return this.segurados;
-    }
+    protected String apolice;
+    protected double vlrApolice;
+    protected LocalDate dtInicio;
+    protected LocalDate dtFim;
+       
 
     public String getApolice() {
         return this.apolice;
@@ -46,11 +42,6 @@ private List<Segurado> segurados;
         this.dtFim = dtFim;
     }
 
-    public void setSegurados(Segurado segurado) {
-        if (this.segurados == null) {
-        this.segurados = new ArrayList<>();
-    }
-    this.segurados.add(segurado);
-    }
+   
 
 }
