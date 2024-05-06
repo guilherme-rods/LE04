@@ -43,12 +43,8 @@ public class Seguradora {
         return "Nenhum contrato encontrado com essa apolice";
     }
 
-    public String[] listarSeguros() {
-        String[] listaSeguros = new String[seguros.size()];
-        for (int i = 0; i < seguros.size(); i++) {
-            listaSeguros[i] = seguros.get(i).toString();
-        }
-        return listaSeguros;
+    public List<?> listarSeguros() {       
+        return this.seguros;
     }
 
     public int quantidadeSeguros() {

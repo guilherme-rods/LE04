@@ -1,7 +1,12 @@
 package br.edu.up.modelos;
 
 public abstract class Pessoa10 {
-    private String nome, cpf, rg, endereço, telefone, cidade;
+    private String nome;
+    private String cpf;
+    private String rg;
+    private String endereço;
+    private String telefone;
+    private String cidade;
     private Enum sexo;
 
     public String getNome() {

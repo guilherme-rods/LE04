@@ -42,12 +42,12 @@ public class SeguroVida extends Seguro {
 
     public String toString() {
         return "SeguroVida\n   {\n" +
-           "   apolice='" + apolice + '\'' +
-           ", \n   vlrApolice=" + vlrApolice +
-           ", \n   dtInicio=" + dtInicio +
-           ", \n   cobreDoenca=" + cobreDoenca +
-           ", \n   cobreAcidente=" + cobreAcidente +
-           "\n   }\n";
+           "   \"apolice\" = \"" + apolice + '\'' +
+           "\", \n   \"vlrApolice\" = " + vlrApolice +
+           ", \n   \"dtInicio\" = \"" + dtInicio +
+           "\", \n   \"cobreDoenca\" = \"" + cobreDoenca +
+           "\", \n   \"cobreAcidente\" = \"" + cobreAcidente +
+           "\"\n   }\n";
     }
 
 }

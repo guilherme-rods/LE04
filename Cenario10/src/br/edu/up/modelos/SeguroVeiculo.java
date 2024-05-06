@@ -23,13 +23,13 @@ public class SeguroVeiculo extends Seguro {
     @Override
     public String toString() {
         return "SeguroVeiculo\n   {\n" +
-                "   apolice='" + apolice + 
-                ", \n   vlrApolice=" + vlrApolice +
-                ", \n   dtInicio=" + dtInicio  +
-                ", \n   valorFranquia=" + valorFranquia +
-                ", \n   temCarroReserva=" + temCarroReserva +
-                ", \n   cobreVidros=" + cobreVidros +
-                "\n   }\n";
+                "   \"apolice\" = \"" + apolice + 
+                "\", \n   \"vlrApolice\" = " + vlrApolice +
+                ", \n   \"dtInicio\" = \"" + dtInicio  +
+                "\", \n   \"valorFranquia\" = \"" + valorFranquia +
+                "\", \n   \"temCarroReserva\" = \"" + temCarroReserva +
+                "\", \n   \"cobreVidros\" = \"" + cobreVidros +
+                "\"\n   }\n";
     }
 
     public double getValorFranquia() {
