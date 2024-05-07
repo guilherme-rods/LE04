@@ -21,34 +21,34 @@ public class ClienteView {
             System.out.println("7.  Devolução de cliente pessoa ");
             System.out.println("8.  Devolução de cliente empresa");
             System.out.println("9.  Sair");
-            int opcao = scanner.nextInt();
+            String opcao = scanner.next();
             scanner.nextLine();
             switch (opcao) {
-                case 1:
+                case "1":
                     incluirClientePessoa();
                     break;
-                case 2:
+                case "2":
                     incluirClienteEmpresa();
                     break;
-                case 3:
+                case "3":
                     MostrarDadoslientePessoa();
                     break;
-                case 4:
+                case "4":
                     MostrarDadoslienteEmpresa();
                     break;
-                case 5:
+                case "5":
                     EmprestarParaClientePessoa();
                     break;
-                case 6:
+                case "6":
                     EmprestarParaClienteEmpresa();
                     break;
-                case 7:
+                case "7":
                     DevoluçãoDeClientePessoa();
                     break;
-                case 8:
+                case "8":
                     DevoluçãoDeClienteEmpresa();
                     break;
-                case 9:
+                case "9":
                     return;
                 default:
                     break;
