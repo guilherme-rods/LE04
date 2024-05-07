@@ -9,8 +9,8 @@ public class SeguradoraControler {
 
     private Seguradora seguradora;
 
-    public SeguradoraControler() {
-        this.seguradora = new Seguradora();
+    public SeguradoraControler(String nome) {
+        this.seguradora = new Seguradora(nome);
     }
 
     public void incluirSeguro(Seguro seguro) {

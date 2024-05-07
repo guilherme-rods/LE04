@@ -8,7 +8,7 @@ public abstract class Seguro {
     protected double vlrApolice;
     protected LocalDate dtInicio;
     protected LocalDate dtFim;
-       
+    
 
     public String getApolice() {
         return this.apolice;

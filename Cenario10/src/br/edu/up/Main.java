@@ -4,8 +4,10 @@ import br.edu.up.controle.*;
 
 public class Main {
     public static void main(String[] args) {
-        SeguradoraControler controler = new SeguradoraControler();
-        SeguradoraView view = new SeguradoraView(controler);
+        
+        
+        SeguradoraView view = new SeguradoraView();
         view.iniciar();
+       
     }
 }
