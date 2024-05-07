@@ -1,4 +1,6 @@
-package br.edu.up.modelos;
+package br.edu.up;
+
+import java.util.Arrays;
 
 public class Livro {
 
@@ -6,16 +8,16 @@ public class Livro {
 
     private String titulo;
 
-    private String[] autor;
+    private String[] autores;
 
     private String isbn;
 
     private int ano;
 
-    public Livro(String codigo, String titulo, String[] autor, String isbn, int ano) {
+    public Livro(String codigo, String titulo, String[] autores, String isbn, int ano) {
         this.codigo = codigo;
         this.titulo = titulo;
-        this.autor = autor;
+        this.autores = autores;
         this.isbn = isbn;
         this.ano = ano;
     }
@@ -37,11 +39,11 @@ public class Livro {
     }
 
     public String[] getAutor() {
-        return autor;
+        return autores;
     }
 
     public void setAutor(String[] autor) {
-        this.autor = autor;
+        this.autores = autor;
     }
 
     public String getIsbn() {
@@ -59,4 +61,12 @@ public class Livro {
     public void setAno(int ano) {
         this.ano = ano;
     }
+
+    @Override
+    public String toString() {
+        return "Livro [codigo=" + codigo + ", titulo=" + titulo + ", autor=" + Arrays.toString(autores) + ", isbn=" + isbn
+                + ", ano=" + ano + "]";
+    }
+
+    
 }
