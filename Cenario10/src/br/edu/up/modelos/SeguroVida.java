@@ -1,6 +1,5 @@
 package br.edu.up.modelos;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class SeguroVida extends Seguro {
