@@ -1,5 +1,4 @@
 package br.edu.up;
-import br.edu.up.modelos.*;
 
 public class Programa1 {
     public static void main(String[] args) throws Exception {

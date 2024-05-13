@@ -1,33 +1,38 @@
 package br.edu.up.modelos;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Estacionamento {
 
-    private List<Carro> carros = new ArrayList<>();
+    private Carro[] carros = new Carro[10];
     private int vagas = 10;
     private double valorPeriodo = 5.00;
+    private int totalDeVeiculos = 0;
 
     public boolean entradaVeiculo(Carro carro){
-        if(carros.size() < vagas){
-            carros.add(carro);
+        if(totalDeVeiculos < vagas){
+            carros[totalDeVeiculos] = carro;
+            totalDeVeiculos++;
             return true;
         }
         return false;
     }
 
     public Carro saidaVeiculo(String placa){
-        for (Carro carro : carros){
-            if(carro.getPlaca().equals(placa)){
-                carros.remove(carro);
-                return carro;
+        for (int i = 0; i < totalDeVeiculos; i++){
+            if(carros[i].getPlaca().equals(placa)){
+            Carro carroSaida = carros[i];
+            for(int j = 0; j < totalDeVeiculos - 1; j++){
+                carros[j] = carros[j + 1];
+            }
+            carros[totalDeVeiculos - 1] = null;
+            totalDeVeiculos--;
+            return carroSaida;
             }
         }
         return null;
     }
 
     public int getTotalVeiculos() {
-        return carros.size();
+        return totalDeVeiculos;
     }
 
     public double getValorPeriodo() {
@@ -37,6 +42,4 @@ public class Estacionamento {
     public void setValorPeriodo(double valorPeriodo) {
         this.valorPeriodo = valorPeriodo;
     }
-
-    
 }
