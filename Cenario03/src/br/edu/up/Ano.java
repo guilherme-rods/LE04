@@ -8,10 +8,12 @@ public class Ano {
 
     private Mes[] mes;
 
-    public Ano(int ano, boolean bissexto, Mes[] mes) {
+    public Ano(int ano, boolean bissexto, Mes mes) {
         this.ano = ano;
         this.bissexto = bissexto;
-        this.mes = mes;
+        this.mes = new Mes[12];
+        this.mes[mes.getMes()] = mes;
+        
     }
 
     public int getAno() {

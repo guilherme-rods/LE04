@@ -4,15 +4,12 @@ public class Dia{
 
     private int diaMes;
 
-    private Compromisso[] compromisso=new Compromisso[24];
+    private Compromisso[] compromisso;
 
-    public Dia(Compromisso c){
-       
-    }
-
-    public Dia(int diaMes, Compromisso[] compromisso) {
+    public Dia(int diaMes, Compromisso compromisso) {
         this.diaMes = diaMes;
-        this.compromisso = compromisso;
+        this.compromisso=new Compromisso[24];
+        this.compromisso[compromisso.getHora()]=compromisso;
     }
 
     public int getDiaMes() {
