@@ -7,32 +7,28 @@ public class Estacionamento {
     private double valorPeriodo = 5.00;
     private int totalDeVeiculos = 0;
 
-    public boolean entradaVeiculo(Carro carro){
-        if(totalDeVeiculos < vagas){
-            carros[totalDeVeiculos] = carro;
-            totalDeVeiculos++;
-            return true;
-        }
-        return false;
+    public Carro[] getCarros() {
+        return carros;
     }
 
-    public Carro saidaVeiculo(String placa){
-        for (int i = 0; i < totalDeVeiculos; i++){
-            if(carros[i].getPlaca().equals(placa)){
-            Carro carroSaida = carros[i];
-            for(int j = 0; j < totalDeVeiculos - 1; j++){
-                carros[j] = carros[j + 1];
-            }
-            carros[totalDeVeiculos - 1] = null;
-            totalDeVeiculos--;
-            return carroSaida;
+    public void setCarro(Carro carro) {
+        for (int i = 0; i < this.carros.length; i++) {
+            if(this.carros[i] == null){
+                this.carros[i] = carro;
+                break;
             }
         }
-        return null;
+    }
+    public void setCarros(Carro[] carros) {
+        this.carros = carros;
     }
 
-    public int getTotalVeiculos() {
-        return totalDeVeiculos;
+    public int getVagas() {
+        return vagas;
+    }
+
+    public void setVagas(int vagas) {
+        this.vagas = vagas;
     }
 
     public double getValorPeriodo() {
@@ -41,5 +37,13 @@ public class Estacionamento {
 
     public void setValorPeriodo(double valorPeriodo) {
         this.valorPeriodo = valorPeriodo;
+    }
+
+    public int getTotalDeVeiculos() {
+        return totalDeVeiculos;
+    }
+
+    public void setTotalDeVeiculos(int totalDeVeiculos) {
+        this.totalDeVeiculos = totalDeVeiculos;
     }
 }
