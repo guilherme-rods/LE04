@@ -1,65 +1,42 @@
 package br.edu.up.Controles;
 
 import br.edu.up.modelos.*;
-import br.edu.up.Telas.*;
 
 public class ControleEstacionamento {
 
     private Estacionamento estacionamento;
-    private Menu menu;
 
-    public ControleEstacionamento(Estacionamento estacionamento, Menu menu){
+    public ControleEstacionamento(Estacionamento estacionamento) {
         this.estacionamento = estacionamento;
-        this.menu = menu;
+
     }
 
-    public void realizarEntradaVeiculo(){
-        Carro carro = menu.solicitarDadosVeiculo();
-        if (estacionamento.entradaVeiculo(carro)){
-            menu.mostrarMensagem("Veículo estacionado!");
-        }else {
-            menu.mostrarMensagem("Estacionamento lotado!");
+    public boolean entradaVeiculo(Carro carro) {
+        if (estacionamento.getTotalDeVeiculos() < estacionamento.getVagas()) {
+            estacionamento.setCarro(carro);
+            estacionamento.setTotalDeVeiculos(estacionamento.getTotalDeVeiculos() + 1);
+            return true;
         }
+        return false;
+    }
+    
+    public Estacionamento getEstacionamento() {
+        return estacionamento;
     }
 
-    public void realizarSaidaVeiculo() {
-        String placa = menu.solicitarPlacaVeiculo();
-        Carro carro = estacionamento.saidaVeiculo(placa);
-        if (carro != null) {
-            menu.mostrarMensagem("Veículo com placa " + placa + " saiu do estacionamento.");
-        } else {
-            menu.mostrarMensagem("Veículo com placa " + placa + " não encontrado.");
-        }
-    }
+    public String saidaVeiculo(String placa) {
+        Carro[] carros = estacionamento.getCarros();
+        for (int i = 0; i < carros.length; i++) {
 
-    private void gerarRelatorio() {
-        double totalVeiculos = estacionamento.getTotalVeiculos();
-        double valorTotal = totalVeiculos * estacionamento.getValorPeriodo();
-        menu.mostrarMensagem("Total de veículos estacionados: " + totalVeiculos);
-        menu.mostrarMensagem("Valor total a receber: R$ " + valorTotal);
-    }
+            if (carros[i].getPlaca().equals(placa)) {
 
-    public void iniciar(){
-        int opcao;
-        do{
-            opcao = menu.mostrarMenu();
-            switch (opcao) {
-                case 1:
-                    realizarEntradaVeiculo();
-                    break;
-                    case 2:
-                    realizarSaidaVeiculo();
-                    break;
-                case 3:
-                    gerarRelatorio();
-                    break;
-                case 4:
-                    menu.mostrarMensagem("Saindo do programa.");
-                    break;
-                default:
-                    menu.mostrarMensagem("Opção inválida.");
+                carros[i] = null;
+                this.estacionamento.setCarros(carros);
+                return "Retirado carro placa " + placa;
+
             }
-        } while (opcao != 4);
-        
-    }   
+        }
+        return null;
+    }
+
 }
