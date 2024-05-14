@@ -9,7 +9,7 @@ public class Dia{
     public Dia(int diaMes, Compromisso compromisso) {
         this.diaMes = diaMes;
         this.compromisso=new Compromisso[24];
-        this.compromisso[compromisso.getHora()]=compromisso;
+        this.compromisso[compromisso.getHora()-1]=compromisso;
     }
 
     public int getDiaMes() {

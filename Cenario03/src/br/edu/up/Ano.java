@@ -12,7 +12,10 @@ public class Ano {
         this.ano = ano;
         this.bissexto = bissexto;
         this.mes = new Mes[12];
-        this.mes[mes.getMes()] = mes;
+        this.mes[mes.getNumero()-1] = mes;
+        if(bissexto == true && mes.getNumero()==2){
+            mes.setQtdeDiasBissexto();
+        }
         
     }
 
@@ -34,12 +37,6 @@ public class Ano {
 
     public Mes[] getMes() {
         return mes;
-    }
-
-    public void setMes(Mes[] mes) {
-        this.mes = mes;
-    }
-
-    
+    }   
 
 }
