@@ -13,17 +13,23 @@ public class ClienteControler {
         this.clientes = new ArrayList<>();
     }
 
-    public void emprestar(double valor, String nome) {
-        this.clientes.forEach(cliente -> {
-            if (cliente.getNome().equals(nome)) {
-                cliente.setVlrEmprestado(valor);
-            }
-        });
+    public void setCliente(Cliente cliente){
+        this.clientes.add(cliente); 
+    }
 
+    public Cliente getCliente(String nome) {
+        for (Cliente cliente : clientes) {
+            if (cliente.getNome().equals(nome)) {
+                return cliente;
+            }
+        }
+        return null;
     }
 
     public Double devolver(Double valor) {
         return 0.0;
     }
-
+    public List<Cliente> getClientes(){
+        return this.clientes;
+    }
 }

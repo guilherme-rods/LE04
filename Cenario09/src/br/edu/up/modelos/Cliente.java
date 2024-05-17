@@ -9,6 +9,8 @@ public abstract class Cliente {
     protected Double vlrMaximoCredito;
     protected Double vlrEmprestado;
 
+    
+
     public String getNome() {
         return this.nome;
     }

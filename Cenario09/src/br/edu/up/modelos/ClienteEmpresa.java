@@ -6,6 +6,8 @@ public class ClienteEmpresa extends Cliente {
     private String inscEstadual;
     private String cnpj;
 
+    
+
     public String getInscEstadual() {
         return this.inscEstadual;
     }
