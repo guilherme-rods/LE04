@@ -1,12 +1,12 @@
 package br.edu.up.modelos;
 
-public class Pessoa {
-    
-    private String nome;
+public class Pessoa06 {
 
-    private int rg;
+    protected String nome;
 
-    public Pessoa(String nome, int rg) {
+    protected String rg;
+
+    public Pessoa06(String nome, String rg) {
         this.nome = nome;
         this.rg = rg;
     }
@@ -19,13 +19,14 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getRg() {
+    public String getRg() {
         return rg;
     }
 
-    public void setRg(int rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
+    
     
 }

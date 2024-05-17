@@ -40,8 +40,4 @@ public class Passagem {
         this.data_voo = data_voo;
     }
 
-    
-
-
-    
 }
