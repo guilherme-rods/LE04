@@ -2,7 +2,7 @@ package br.edu.up.modelos;
 
 import java.time.LocalDate;
 
-public class Reserva {
+public class Reservas {
 
     private String nome_responsavel;
 
@@ -12,7 +12,7 @@ public class Reserva {
 
     private double valor;
 
-    public Reserva(String nome_responsavel, int qtde_pessoas, LocalDate data, double valor) {
+    public Reservas(String nome_responsavel, int qtde_pessoas, LocalDate data, double valor) {
         this.nome_responsavel = nome_responsavel;
         this.qtde_pessoas = qtde_pessoas;
         this.data = data;
