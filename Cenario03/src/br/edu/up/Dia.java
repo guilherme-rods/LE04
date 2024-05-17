@@ -27,8 +27,4 @@ public class Dia{
     public void setCompromisso(Compromisso[] compromisso) {
         this.compromisso = compromisso;
     }
-
-
-    
-
 }
