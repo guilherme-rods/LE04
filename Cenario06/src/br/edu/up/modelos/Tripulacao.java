@@ -1,12 +1,13 @@
 package br.edu.up.modelos;
+import br.edu.up.modelos.*;
 
-public class Tripulacao extends Pessoa {
+public class Tripulacao extends Pessoa06 {
 
     private int id_aeronautica;
 
     private int matricula;
 
-    public Tripulacao(String nome, int rg, int id_aeronautica, int matricula) {
+    public Tripulacao(String nome, String rg, int id_aeronautica, int matricula) {
         super(nome, rg);
         this.id_aeronautica = id_aeronautica;
         this.matricula = matricula;
