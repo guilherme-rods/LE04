@@ -1,12 +1,10 @@
 package br.edu.up.modelos;
 
-import java.time.*;
-
 public class Eventos {
 
     private String nome;
 
-    private LocalDate data;
+    private String data;
 
     private String local;
 
@@ -16,7 +14,7 @@ public class Eventos {
 
     private double preco_ingresso;
 
-    public Eventos(String nome, LocalDate data, String local, int lotacaoMaxima, int qtde_ingressos_vendidos,
+    public Eventos(String nome, String data, String local, int lotacaoMaxima, int qtde_ingressos_vendidos,
             double preco_ingresso) {
         this.nome = nome;
         this.data = data;
@@ -34,11 +32,11 @@ public class Eventos {
         this.nome = nome;
     }
 
-    public LocalDate getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(LocalDate data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -72,5 +70,12 @@ public class Eventos {
 
     public void setPreco_ingresso(double preco_ingresso) {
         this.preco_ingresso = preco_ingresso;
+    }
+
+    @Override
+    public String toString() {
+        return "Eventos [nome=" + nome + ", data=" + data + ", local=" + local + ", lotacaoMaxima=" + lotacaoMaxima
+                + ", qtde_ingressos_vendidos=" + qtde_ingressos_vendidos + ", preco_ingresso=" + preco_ingresso + "]";
     }  
+
 }

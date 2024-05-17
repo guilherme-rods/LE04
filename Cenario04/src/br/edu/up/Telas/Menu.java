@@ -7,11 +7,11 @@ import br.edu.up.Controles.*;
 public class Menu {
 
     Scanner scanner = new Scanner(System.in);
-    ControleEstacionamento estacionamentoC;
+    EstacionamentoControler estacionamentoC;
     Estacionamento estacionamento;
 
     public Menu() {
-        this.estacionamentoC = new ControleEstacionamento(estacionamento);
+        this.estacionamentoC = new EstacionamentoControler(estacionamento);
     }
 
     public void mostrarMenu() {

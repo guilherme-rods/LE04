@@ -2,11 +2,11 @@ package br.edu.up.Controles;
 
 import br.edu.up.modelos.*;
 
-public class ControleEstacionamento {
+public class EstacionamentoControler {
 
     private Estacionamento estacionamento;
 
-    public ControleEstacionamento(Estacionamento estacionamento) {
+    public EstacionamentoControler(Estacionamento estacionamento) {
         this.estacionamento = estacionamento;
 
     }

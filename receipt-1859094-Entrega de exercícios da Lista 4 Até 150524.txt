@@ -1,0 +1,8 @@
+Envio bem-sucedido!
+Curso: 1859094, 02. Desenvolvimento de Software (Noite-Osório)
+Avaliação: Entrega de exercícios da Lista 4 (Até 15/05/24)
+
+Data de envio: 13/05/24 22:55
+Tamanho do envio: 207 bytes
+Autor do envio: Guilherme Rodrigues UP_Cst em Análise e Desenvolvimento de Sistemas_2NA_20241
+Número de confirmação: eac180db590c44d9a907b5f9df986865
