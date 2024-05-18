@@ -80,9 +80,6 @@ public class ClienteView {
         System.out.println("Qual o valor máximo de crédito?");
         cliente.setVlrMaximoCredito(scanner.nextDouble());
         scanner.nextLine();
-        System.out.println("Qual o valor emprestado?");
-        cliente.setVlrEmprestado(scanner.nextDouble());
-        scanner.nextLine();
         System.out.println("Qual seu peso?");
         cliente.setPeso(scanner.nextDouble());
         scanner.nextLine();
@@ -107,9 +104,6 @@ public class ClienteView {
         cliente.setEndereço(setEndereço());
         System.out.println("Qual o valor máximo de crédito?");
         cliente.setVlrMaximoCredito(scanner.nextDouble());
-        scanner.nextLine();
-        System.out.println("Qual o valor emprestado?");
-        cliente.setVlrEmprestado(scanner.nextDouble());
         scanner.nextLine();
         System.out.println("Qual o ano de fundação da empresa?");
         cliente.setAnoFundacao(scanner.nextInt());
