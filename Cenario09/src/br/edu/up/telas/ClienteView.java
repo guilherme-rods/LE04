@@ -38,10 +38,10 @@ public class ClienteView {
                     incluirClienteEmpresa();
                     break;
                 case "3":
-                    MostrarDadoslientePessoa();
+                    MostrarDadosClientePessoa();
                     break;
                 case "4":
-                    MostrarDadoslienteEmpresa();
+                    MostrarDadosClienteEmpresa();
                     break;
                 case "5":
                     System.out.println("Qual o nome?");
@@ -91,6 +91,7 @@ public class ClienteView {
         scanner.nextLine();
         System.out.println("Qual seu CPF?");
         cliente.setCPF(scanner.nextLine());
+        this.cliente.setCliente(cliente);
 
     }
 
@@ -117,25 +118,24 @@ public class ClienteView {
         cliente.setInscEstadual(scanner.nextLine());
         System.out.println("Qual o CNPJ da empresa?");
         cliente.setCnpj(scanner.nextLine());
+        this.cliente.setCliente(cliente);
 
     }
 
-    public void MostrarDadoslientePessoa() {
+    public void MostrarDadosClientePessoa() {
         for (Cliente cliente : this.cliente.getClientes()) {
             if (cliente instanceof ClientePessoa) {
-                System.out.println(cliente.toString());
+                ClientePessoa clientePessoa = (ClientePessoa) cliente;
+                System.out.println(clientePessoa.toString());
             }
         }
     }
 
-    public void MostrarDadoslienteEmpresa() {
+    public void MostrarDadosClienteEmpresa() {
         for (Cliente cliente : this.cliente.getClientes()) {
-
-            // cliente.getCnpj();
-
             if (cliente instanceof ClienteEmpresa) {
-                ClienteEmpresa empresa = (ClienteEmpresa) cliente;
-                System.out.println(empresa.toString());
+                ClienteEmpresa clienteEmpresa = (ClienteEmpresa) cliente;
+                System.out.println(clienteEmpresa.toString());
             }
         }
 
