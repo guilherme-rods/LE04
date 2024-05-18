@@ -1,4 +1,5 @@
 package br.edu.up.modelos;
+import java.util.Objects;
 
 public class Cidade {
 private String nome;
@@ -18,5 +19,14 @@ private String uf;
 
     public void setUf(String uf) {
         this.uf = uf;
+    }  
+
+    
+    public String toString() {
+        return "{" +
+            " nome='" + getNome() + "'" +
+            ", uf='" + getUf() + "'" +
+            "}";
     }
+    
 }

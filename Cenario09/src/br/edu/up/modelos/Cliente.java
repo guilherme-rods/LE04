@@ -5,7 +5,7 @@ public abstract class Cliente {
     protected String nome;
     protected String telefone;
     protected String email;
-    protected String endereço;
+    protected Endereco endereço;
     protected Double vlrMaximoCredito;
     protected Double vlrEmprestado;
 
@@ -51,11 +51,11 @@ public abstract class Cliente {
         this.email = email;
     }
 
-    public String getEndereço() {
+    public Endereco getEndereço() {
         return this.endereço;
     }
 
-    public void setEndereço(String endereço) {
+    public void setEndereço(Endereco endereço) {
         this.endereço = endereço;
     }
 

@@ -76,7 +76,7 @@ public class ClienteView {
         System.out.println("Qual seu email?");
         cliente.setEmail(scanner.nextLine());
         System.out.println("Qual seu endereço?");
-        cliente.setEndereço(scanner.nextLine());
+        cliente.setEndereço(setEndereço());
         System.out.println("Qual o valor máximo de crédito?");
         cliente.setVlrMaximoCredito(scanner.nextDouble());
         scanner.nextLine();
@@ -104,7 +104,7 @@ public class ClienteView {
         System.out.println("Qual o email da empresa?");
         cliente.setEmail(scanner.nextLine());
         System.out.println("Qual o endereço da empresa?");
-        cliente.setEndereço(scanner.nextLine());
+        cliente.setEndereço(setEndereço());
         System.out.println("Qual o valor máximo de crédito?");
         cliente.setVlrMaximoCredito(scanner.nextDouble());
         scanner.nextLine();
@@ -176,6 +176,23 @@ public class ClienteView {
         }
         return "Valor invalido";
 
+    }
+    public Endereco setEndereço(){
+        Cidade cidade = new Cidade();
+        Endereco endereco = new Endereco(cidade);
+        System.out.println("Qual cidade");
+        cidade.setNome(scanner.nextLine());
+        System.out.println("Qual Estado");
+        cidade.setUf(scanner.nextLine());
+        System.out.println("qual sua rua?");
+        endereco.setRua(scanner.nextLine());
+        System.out.println("numero");
+        endereco.setNumero(scanner.nextLine());
+        System.out.println("Bairro");
+        endereco.setBairro(scanner.nextLine());
+        System.out.println("CEP");
+        endereco.setCep(scanner.nextLine()); 
+        return endereco;
     }
 
 }
