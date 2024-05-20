@@ -35,7 +35,7 @@ public class ClientePessoa extends Cliente {
                 "  \"nome\": \"" + nome + "\",\n" +
                 "  \"telefone\": \"" + telefone + "\",\n" +
                 "  \"email\": \"" + email + "\",\n" +
-                "  \"endereço\": \"" + endereço + "\",\n" +
+                "  \"endereço\": \"" + endereço.toString() + "\",\n" +
                 "  \"vlrMaximoCredito\": \"" + vlrMaximoCredito + "\",\n" +
                 "  \"vlrEmprestado\": \"" + vlrEmprestado + "\",\n" +
                 "  \"altura\": \"" + altura + "\",\n" +

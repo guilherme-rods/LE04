@@ -6,6 +6,8 @@ public class ClienteEmpresa extends Cliente {
     private String inscEstadual;
     private String cnpj;
 
+    
+
     public String getInscEstadual() {
         return this.inscEstadual;
     }
@@ -36,7 +38,7 @@ public class ClienteEmpresa extends Cliente {
                 "  \"nome\": \"" + nome + "\",\n" +
                 "  \"telefone\": \"" + telefone + "\",\n" +
                 "  \"email\": \"" + email + "\",\n" +
-                "  \"endereço\": \"" + endereço + "\",\n" +
+                "  \"endereço\": \"" + endereço.toString() + "\",\n" +
                 "  \"vlrMaximoCredito\": \"" + vlrMaximoCredito + "\",\n" +
                 "  \"vlrEmprestado\": \"" + vlrEmprestado + "\",\n" +
                 "  \"anoFundacao\": \"" + anoFundacao + "\",\n" +
