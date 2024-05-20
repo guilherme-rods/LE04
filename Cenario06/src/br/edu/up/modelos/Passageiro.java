@@ -1,10 +1,7 @@
 package br.edu.up.modelos;
 
-<<<<<<< HEAD
-public class Passageiro {
-=======
 public class Passageiro extends Pessoa06 {
->>>>>>> e9fbd89473f7aced6531603eef2e60600611336f
+
 
     private int id_bagagem;
 
