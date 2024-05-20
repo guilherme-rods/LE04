@@ -37,9 +37,9 @@ public class Menu {
                     gerarRelatorio();
                     break;
                 case 4:
-
+                    System.out.println("Saindo...");
+                    scanner.close();
                     return;
-
                 default:
                     System.out.println("invalido");
                     break;

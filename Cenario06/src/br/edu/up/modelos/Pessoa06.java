@@ -6,9 +6,12 @@ public class Pessoa06 {
 
     protected String rg;
 
-    public Pessoa06(String nome, String rg) {
+    private Aeronave aeronave;
+
+    public Pessoa06(String nome, String rg, Aeronave aeronave) {
         this.nome = nome;
         this.rg = rg;
+        this.aeronave = aeronave;
     }
 
     public String getNome() {
@@ -27,6 +30,11 @@ public class Pessoa06 {
         this.rg = rg;
     }
 
-    
-    
+    public Aeronave getAeronave() {
+        return aeronave;
+    }
+
+    public void setAeronave(Aeronave aeronave) {
+        this.aeronave = aeronave;
+    } 
 }
